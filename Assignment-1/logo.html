@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #45474a;
+        }
+
+        .container {
+            width: 240px;
+            height: 240px;
+            border: 25px solid;
+            border-left-color: rgb(160, 235, 201);
+            border-right-color:rgb(207, 194, 194);
+            border-top-color: rgb(236, 140, 60);
+            border-bottom-color: rgb(17, 207, 236);
+            transform: rotate(45deg);
+            position: relative;
+            align-content: center;
+            left: 40%;
+            margin-top: 15%;
+        }
+    
+     .container::before {
+      content: '';
+      position: absolute;
+      width: 26px;
+      height: 26px;
+      background-color:  rgba(139, 41, 41, 0.653); 
+      top: -25px;
+      left: -25px;
+      
+    }
+ 
+    .container::after {
+      content: '';
+      position: absolute;
+      width: 26px;
+      height: 26px;
+      background-color:rgb(46, 145, 231); 
+      bottom: -25px;
+      right: -25px;
+    }
+ 
+    .top-right {
+      content: '';
+      position: absolute;
+      width: 26px;
+      height: 26px;
+      background-color: rgba(139, 41, 41, 0.653);
+      top: -40px;
+      right: -73px;
+      transform: rotate(45deg);
+      margin-bottom: 20%;
+    }
+
+    .bottom-left {
+      content: '';
+      position: absolute;
+      width: 26px;
+      height: 26px;
+      background-color: rgb(46, 145, 231); 
+      bottom: -30px;
+      left: -87px;
+      transform: rotate(45deg);
+      margin-bottom: 20%;
+    }
+        
+    div {
+        text-align: center;
+        color: white;
+        margin-top: 30%;
+        text-wrap: nowrap;
+        
+       
+        }
+
+    .straight-text {
+        transform: rotate(-45deg);
+        }
+
+    .highlight {
+        color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="straight-text">
+            <h1>HTML<span class="highlight">&</span>CSS</h1>
+            <p>design and build websites</p>
+            <div class="top-right"></div>
+            <div class="bottom-left"></div>
+        </div>
+    </div>
+
+</body>
+</html>
